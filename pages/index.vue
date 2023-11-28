@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute lg:w-1/2 xl:w-1/3 z-50 xl:top-1/3 lg:left-16 lg:rounded-xl shadow-lg bg-base-100 md:overflow-hidden h-screen md:h-auto">
+    <div class="absolute lg:w-1/2 xl:w-1/3 z-50 xl:top-1/2 -translate-y-1/2 lg:left-16 lg:rounded-xl shadow-lg bg-base-100 md:overflow-hidden h-screen md:h-auto">
         <h1 class="font-black text-4xl bg-sky-100 p-8 text-center lg:text-left">Mercadillo solidario</h1>
         <div class="p-8 text-justify">
             <p>
@@ -9,12 +9,13 @@
             <p>
                 El <b>100%</b> del dinero recaudado será donado a la <a href="https://cruzvermella.gal/?lang=es" class="underline decoration-dashed">Cruz Roja</a>.
             </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente autem unde placeat voluptate, nulla perferendis nam saepe modi, in dolorum obcaecati quaerat repellat quia minus iusto voluptatum nihil officiis molestias.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi placeat animi consectetur provident autem facilis, nam cumque. Cumque nemo, dicta cupiditate modi harum, autem sapiente numquam, nam voluptatibus veniam adipisci.
+            </p>
             <div class="flex mt-8 gap-8 flex-col md:flex-col">
                 <NuxtLink to="/catalogue" class="rounded-md text-xl font-medium flex gap-2 hover:gap-4 hover:-rotate-3 hover:scale-110 transition-all bg-blue-300 w-max p-3 text-white">
                     <span class="underline decoration-dashed w-max">Ir al catálogo</span> 🡢
-                </NuxtLink>
-                <NuxtLink to="/catalogue" :no-prefetch="true" class="rounded-md text-xl font-medium flex gap-2 hover:gap-4 hover:-rotate-3 hover:scale-110 transition-all bg-red-300 w-max p-3 text-white">
-                    <span class="underline decoration-dashed w-max">Más sobre el mercadillo</span> 🡢
                 </NuxtLink>
             </div>
         </div>

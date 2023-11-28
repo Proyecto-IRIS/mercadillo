@@ -2,17 +2,16 @@
 import { Product } from '~/types';
 
 const props = defineProps<{
-    products: Ref<Product[] | null | undefined>
+    products: Product[] | null | undefined
 }>()
 
 </script>
 
 <template>
     <div class="">
-        <div class="carousel carousel-center space-x-2">
+        <div class="carousel carousel-center space-x-2" v-if="props.products?.length">
             <!-- <ProductCard v-if="products" v-for="product in products.value" class="carousel-item" :product="product" /> -->
-            <div v-if="products"
-                class="border rounded-lg overflow-hidden flex items-center flex-col gap-2 shadow p-2 carousel-item"
+            <div class="border rounded-lg overflow-hidden flex items-center flex-col gap-2 shadow p-2 carousel-item"
                 v-for="product in props.products">
                 <div v-if="(typeof product != 'boolean')">
                     <!--PRODUCT IMAGE-->
@@ -23,9 +22,9 @@ const props = defineProps<{
                     </div>
                 </div>
             </div>
-            <div v-else>
-                Nothing
-            </div>
+        </div>
+        <div v-else class="text-center pt-4 text-lg text-gray-500">
+            Nada por aquí... 😢
         </div>
     </div>
 </template>
