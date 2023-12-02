@@ -1,24 +1,56 @@
+<script setup lang="ts">
+    import { ArrowRightIcon } from '@heroicons/vue/24/outline'
+</script>
 <template>
-    <div class="absolute lg:w-1/2 xl:w-1/3 z-50 xl:top-1/2 -translate-y-1/2 lg:left-16 lg:rounded-xl shadow-lg bg-base-100 md:overflow-hidden h-screen md:h-auto">
-        <h1 class="font-black text-4xl bg-sky-100 p-8 text-center lg:text-left">Mercadillo solidario</h1>
-        <div class="p-8 text-justify">
-            <p>
-                ¡El IES Rosalía de Castro presenta su <b>Mercadillo Solidario</b> navideño! Estamos emocionados de invitarles a participar en este evento el día 20 de diciembre, donde podrán disfrutar de fantástica música y comida, junto con la posibilidad de apoyar a una causa mayor.
-            </p>
-            <br>
-            <p>
-                El <b>100%</b> del dinero recaudado será donado a la <a href="https://cruzvermella.gal/?lang=es" class="underline decoration-dashed">Cruz Roja</a>.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente autem unde placeat voluptate, nulla perferendis nam saepe modi, in dolorum obcaecati quaerat repellat quia minus iusto voluptatum nihil officiis molestias.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi placeat animi consectetur provident autem facilis, nam cumque. Cumque nemo, dicta cupiditate modi harum, autem sapiente numquam, nam voluptatibus veniam adipisci.
-            </p>
-            <div class="flex mt-8 gap-8 flex-col md:flex-col">
-                <NuxtLink to="/catalogue" class="rounded-md text-xl font-medium flex gap-2 hover:gap-4 hover:-rotate-3 hover:scale-110 transition-all bg-blue-300 w-max p-3 text-white">
-                    <span class="underline decoration-dashed w-max">Ir al catálogo</span> 🡢
+    <div class="sticky top-0 bg-base-100 flex w-full py-2 m-0 gap-2 justify-center z-50">
+        <NuxtImg src="/rosi.png" alt="" class="w-24 object-scale-down" />
+        <NuxtImg src="/bi.png" alt="" class="w-16 object-scale-down" />
+    </div>
+    <div class="hero min-h-screen bg-base-200"
+        style="background-image: url(https://images.unsplash.com/photo-1597668900045-b9283c0de174?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center">
+            <div class="max-w-md text-white">
+                <h1 class="text-5xl font-bold">II Mercado solidario de Nadal</h1>
+                <p class="py-6">Organizado polo alumnado do IES Rosalía de Castro</p>
+                <NuxtLink to="#content">
+                    <button class="btn bg-green-400 border-0 text-white">Multipliquemos a ilusión!</button>
                 </NuxtLink>
             </div>
         </div>
     </div>
-    <img class="brightness-75 w-full h-screen object-cover absolute top-0" src="https://images.unsplash.com/photo-1597668900045-b9283c0de174?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    <div id="content" class="px-4 relative -top-16 z-49 rounded-t-3xl bg-white pt-16 text-xl lg:grid lg:grid-cols-2 gap-2">
+        <div class="mb-16 lg:border lg:mb-0 lg:p-4 rounded-box">
+            <h2 class="text-4xl font-bold mb-6">Pequenas xoias...</h2>
+            <p>No mercadillo solidario venderanse toda clase de artigos listos para recibir unha nova vida.</p>
+            <NuxtLink to="/catalogue"
+                class="rounded-md text-xl font-medium flex align-middle gap-2 hover:gap-4 hover:-rotate-3 hover:scale-110 transition-all bg-green-400 w-max p-3 text-white mt-8">
+                Ir ao catálogo <ArrowRightIcon class="w-8" />
+            </NuxtLink>
+        </div>
+        <div class="mb-16 lg:border lg:mb-0 lg:p-4 rounded-box">
+            <h2 class="text-4xl font-bold mb-6">...e grandes actividades...</h2>
+            <p class="mb-6">O mercado, ademais, constará de actividades do máis variopintas, aseguradas para facerche pasar un gran rato:</p>
+            <ActivitiesCarousel />
+        </div>
+        <div class="mb-16 lg:border lg:mb-0 lg:p-4 rounded-box">
+            <h2 class="text-4xl font-bold mb-6">...por unha causa maior!</h2>
+            <p>Todo o diñeiro recaudado será donado ao noso colaborador:</p>
+
+            <NuxtImg src="/CRE-ES-Horizontal-RGB.png" alt="" class="mt-10 max-w-md w-full mx-auto" />
+        </div>
+        <div class="lg:border lg:mb-0 lg:p-4 rounded-box">
+            <p class="text-4xl font-bold mb-6">Anímate!</p>
+            <p class="mb-6">Ven visitarnos o 20 de decembro, e disfruta desta preciosa oportunidade para axudar aos máis necesitados connosco!</p>
+            <ClientOnly>
+                <Countdown class="mx-auto" />
+            </ClientOnly>
+        </div>
+    </div>
 </template>
+
+<style scoped>
+    html {
+   scroll-behavior: smooth;
+}
+</style>

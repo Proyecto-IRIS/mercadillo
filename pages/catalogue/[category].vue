@@ -12,7 +12,7 @@ const { data: products } = await useFetch<Product[]>(`/api/products/${category.v
         </NuxtLink>
         <div v-if="products?.length != 0" class="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
             <div v-for="product in products" class="border rounded-lg flex justify-center p-2 flex-col text-center">
-                <img :src="product?.imageUrl" class="rounded-md object-scale-down my-2 basis-1/2 max-h-36">
+                <NuxtImg :src="product?.imageUrl" class="rounded-md object-scale-down my-2 basis-1/2 max-h-36" />
                 <p>{{ product.name }}</p>
             </div>
         </div>
