@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { ArrowRightIcon } from '@heroicons/vue/24/outline'
+import { ArrowRightIcon } from '@heroicons/vue/24/outline'
 </script>
 <template>
     <div class="sticky top-0 bg-base-100 flex w-full py-2 m-0 gap-2 justify-center z-50">
@@ -25,13 +25,15 @@
             <h2 class="text-4xl font-bold mb-6">Pequenas xoias...</h2>
             <p>No mercadillo solidario venderanse toda clase de artigos listos para recibir unha nova vida.</p>
             <NuxtLink to="/catalogue"
-                class="rounded-md text-xl font-medium flex align-middle gap-2 hover:gap-4 hover:-rotate-3 hover:scale-110 transition-all bg-green-400 w-max p-3 text-white mt-8">
-                Ir ao catálogo <ArrowRightIcon class="w-8" />
+                class="rounded-md text-xl font-medium flex align-middle gap-2 hover:gap-4 hover:-rotate-3 hover:scale-110 transition-all bg-green-400 w-max p-3 text-white mt-8 lg:mt-16">
+                Ir ao catálogo
+                <ArrowRightIcon class="w-8" />
             </NuxtLink>
         </div>
         <div class="mb-16 lg:border lg:mb-0 lg:p-4 rounded-box">
             <h2 class="text-4xl font-bold mb-6">...e grandes actividades...</h2>
-            <p class="mb-6">O mercado, ademais, constará de actividades do máis variopintas, aseguradas para facerche pasar un gran rato:</p>
+            <p class="mb-6">O mercado, ademais, constará de actividades do máis variopintas, aseguradas para facerche pasar
+                un gran rato:</p>
             <ActivitiesCarousel />
         </div>
         <div class="mb-16 lg:border lg:mb-0 lg:p-4 rounded-box">
@@ -40,18 +42,33 @@
 
             <NuxtImg src="/CRE-ES-Horizontal-RGB.png" alt="" class="mt-10 max-w-md w-full mx-auto" />
         </div>
-        <div class="lg:border lg:mb-0 lg:p-4 rounded-box">
+        <div class="mb-16 lg:border lg:mb-0 lg:p-4 rounded-box">
             <p class="text-4xl font-bold mb-6">Anímate!</p>
-            <p class="mb-6">Ven visitarnos o 20 de decembro, e disfruta desta preciosa oportunidade para axudar aos máis necesitados connosco!</p>
+            <p class="mb-6">Ven visitarnos o 20 de decembro, e disfruta desta preciosa oportunidade para axudar aos máis
+                necesitados connosco!</p>
             <ClientOnly>
                 <Countdown class="mx-auto" />
             </ClientOnly>
         </div>
     </div>
+    <div class="footer p-8 bg-neutral text-neutral-content">
+        <div>
+            <p class="footer-title">Es ti   unha empresa?</p>
+            <p>Animámoste a crear un <span class="italic">stand</span> no que poidas presentar os teus propios produtos!
+                Simplemente contacta connosco en <NuxtLink class="font-bold" to="mailto:mercadillosolidario@iesrosaliadecastro.org">mercadillosolidario@iesrosaliadecastro.org</NuxtLink> e farémosche un espazo! 
+                <br> A única condición? A doazón do 10% das ganancias dese día.
+            </p>
+        </div>
+        <div>
+            <p class="footer-title">Social</p>
+            <NuxtLink to="https://www.instagram.com/mercarosy/" target="_blank">
+                <InstagramIcon class="w-6"></InstagramIcon>
+            </NuxtLink>
+        </div>
+    </div>
 </template>
 
 <style scoped>
-    html {
-   scroll-behavior: smooth;
-}
-</style>
+html {
+    scroll-behavior: smooth;
+}</style>
