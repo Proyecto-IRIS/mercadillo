@@ -17,9 +17,10 @@
                     <button class="btn bg-green-400 border-0 text-white">Multipliquemos a ilusión!</button>
                 </NuxtLink>
             </div>
+            <span id="content" class="mt-auto absolute bottom-0"></span>
         </div>
     </div>
-    <div id="content" class="px-4 relative -top-16 z-49 rounded-t-3xl bg-white pt-16 text-xl lg:grid lg:grid-cols-2 gap-2">
+    <div class="px-4 relative -top-16 z-49 rounded-t-3xl bg-white pt-16 text-xl lg:grid lg:grid-cols-2 gap-2">
         <div class="mb-16 lg:border lg:mb-0 lg:p-4 rounded-box">
             <h2 class="text-4xl font-bold mb-6">Pequenas xoias...</h2>
             <p>No mercadillo solidario venderanse toda clase de artigos listos para recibir unha nova vida.</p>

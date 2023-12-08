@@ -13,7 +13,7 @@ const colors = [
 
 
 const images = [
-    "undraw_breakfast_psiw.svg",
+    "undraw_gift_box_re_vau4.svg",
     "undraw_book_lover_re_rwjy.svg",
     "undraw_toy_car_-7-umw.svg",
     "undraw_fashion_photoshoot_mtq8.svg",
