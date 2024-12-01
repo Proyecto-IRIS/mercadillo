@@ -11,10 +11,10 @@ import { ArrowRightIcon } from '@heroicons/vue/24/outline'
         <div class="hero-overlay bg-opacity-60"></div>
         <div class="hero-content text-center">
             <div class="max-w-md text-white">
-                <h1 class="text-5xl font-bold">II Mercado solidario de Nadal</h1>
+                <h1 class="text-5xl font-bold">III Mercado solidario de Nadal</h1>
                 <p class="py-6">Organizado polo alumnado do IES Rosalía de Castro</p>
                 <NuxtLink to="#content">
-                    <button class="btn bg-green-400 border-0 text-white">Multipliquemos a ilusión!</button>
+                    <button class="btn bg-green-400 border-0 text-white">Compartamos en nadal!</button>
                 </NuxtLink>
             </div>
             <span id="content" class="mt-auto absolute bottom-0"></span>
@@ -44,7 +44,7 @@ import { ArrowRightIcon } from '@heroicons/vue/24/outline'
         </div>
         <div class="mb-16 lg:border lg:mb-0 lg:p-4 rounded-box">
             <p class="text-4xl font-bold mb-6">Anímate!</p>
-            <p class="mb-6">Ven visitarnos o 20 de decembro, e disfruta desta preciosa oportunidade para axudar aos máis
+            <p class="mb-6">Ven visitarnos o 18 de decembro, e disfruta desta preciosa oportunidade para axudar aos máis
                 necesitados connosco!</p>
             <ClientOnly>
                 <Countdown class="mx-auto" />
@@ -61,7 +61,7 @@ import { ArrowRightIcon } from '@heroicons/vue/24/outline'
         </div>
         <div>
             <p class="footer-title">Social</p>
-            <NuxtLink to="https://www.instagram.com/mercarosy/" target="_blank">
+            <NuxtLink to="https://www.instagram.com/mercadoiesrosalia/" target="_blank">
                 <InstagramIcon class="w-6"></InstagramIcon>
             </NuxtLink>
         </div>
