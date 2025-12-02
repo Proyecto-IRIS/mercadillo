@@ -2,7 +2,7 @@
 import { useNow } from '@vueuse/core'
 
 const now = useNow()
-const mercadilloTime = new Date("Dec 20, 2023 16:30:00").getTime()
+const mercadilloTime = new Date("Dec 17, 2025 16:30:00").getTime()
 
 const timeUntilMercadillo = computed(() => {
     const nowTime = now.value.getTime()
